@@ -1,6 +1,6 @@
 {
-  "appId": "com.codigorenovado.coronavirus",
-  "appName": "CoronaVirus",
+  "appId": "com.codigorenovado.coronavirustrack",
+  "appName": "Corona Virus Track",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
