@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="app/categories"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Corona Track
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+<ion-searchbar animated></ion-searchbar>
+<ion-content class="notifications-content">
+  <ng-container *ngIf="notifications">
+    <ion-item-group>
+      <ion-item id="{{ notification.country }}" class="notification-item" lines="none" *ngFor="let notification of notifications">
+        <a class="country-anchor" [routerLink]="['/app/categories/food/',notification.country]">
+          <ion-row class="notification-item-wrapper">
+            <ion-col size="12" class="details-wrapper ion-align-self-center">
+              <p class="details-name">{{ notification.country }}</p>
+            </ion-col>
+            <ion-col offset="5" size="2" class="details-wrapper ion-align-self-center">
+              <app-aspect-ratio [ratio]="{w: 1, h: 1}">
+                <app-image-shell class="notification-image" [src]="notification.countryInfo.flag" [alt]="'country image'"></app-image-shell>
+              </app-aspect-ratio>
+            </ion-col>
+          </ion-row>
+          <ion-row class="notification-item-wrapper">
+            <ion-col size="6" class="date-wrapper">
+              <h6 class="details-name"><strong>Cases</strong></h6>
+              <p class="details-name">{{ notification.cases | number }}</p>
+              <h6 class="details-name"><strong>Today Cases</strong></h6>
+              <p class="details-name">{{ notification.todayCases | number }}</p>
+              <h6 class="details-name"><strong>Cases Per One Million</strong></h6>
+              <p class="details-name">{{ notification.casesPerOneMillion | number }}</p>
+              <h6 class="details-name"><strong>Active</strong></h6>
+              <p class="details-name">{{ notification.active | number }}</p>
+              <h6 class="details-name"><strong>Recovered</strong></h6>
+              <p class="details-name">{{ notification.recovered | number }}</p>
+            </ion-col>
+            <ion-col size="6" class="date-wrapper">
+              <h6 class="details-name"><strong>Critical</strong></h6>
+              <p class="details-name">{{ notification.critical | number }}</p>
+              <h6 class="details-name"><strong>Deaths</strong></h6>
+              <p class="details-name">{{ notification.deaths | number }}</p>
+              <h6 class="details-name"><strong>Today Deaths</strong></h6>
+              <p class="details-name">{{ notification.todayDeaths | number }}</p>
+              <h6 class="details-name"><strong>Deaths Per One Million</strong></h6>
+              <p class="details-name">{{ notification.deathsPerOneMillion | number }}</p>
+            </ion-col>
+          </ion-row>
+        </a>
+      </ion-item>
+    </ion-item-group>
+  </ng-container>
+</ion-content>

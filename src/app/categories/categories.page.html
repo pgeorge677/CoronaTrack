@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Corona Track
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="food-details-content">
+  <div class="recipes-wrapper">
+    <div class="recipes-list">
+      <div class="recipe-item" >
+        <app-image-shell class="recipe-cover-image" [display]="'cover'">
+          <app-aspect-ratio [ratio]="{w:64, h:1}">
+          </app-aspect-ratio>
+        </app-image-shell>
+
+        <h4 class="recipe-title">COVID-19 CORONAVIRUS PANDEMIC</h4>
+        <hr class="details-divider">
+        <div class="recipe-call-to-action">
+          <h3 class="recipe-name">
+            <app-text-shell [data]="'Coronavirus Cases:'"></app-text-shell>
+            <app-text-shell class="__cases" [data]="recipe?.cases |  number "></app-text-shell>
+          </h3>
+          <h3 class="recipe-name">
+            <app-text-shell [data]="'Deaths:'"></app-text-shell>
+            <app-text-shell class="__deaths" [data]="recipe?.deaths | number"></app-text-shell>
+          </h3>
+          <h3 class="recipe-name">
+            <app-text-shell [data]="'Recovered:'"></app-text-shell>
+            <app-text-shell class="__recovered" [data]="recipe?.recovered | number"></app-text-shell>
+          </h3>
+          <h3 class="recipe-name">
+            <app-text-shell [data]="'Active:'"></app-text-shell>
+            <app-text-shell class="__active" [data]="recipe?.active | number"></app-text-shell>
+          </h3>
+          <h3 class="recipe-name">
+            <app-text-shell class="__last_updated" [data]="'Last updated:'.concat(' ', recipe?.updated |  date:'long')"></app-text-shell>
+          </h3>
+        </div>
+        <hr class="details-divider">
+        <ion-button class="book-now-btn" color="dark" expand="block" fill="outline" [routerLink]="['/app/notifications']">View by country</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,12 @@
+{
+  "appId": "com.codigorenovado.coronavirus",
+  "appName": "CoronaVirus",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

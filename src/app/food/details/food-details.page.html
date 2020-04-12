@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="app/notifications"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Corona Track - {{details?.country}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<div class="details-tittle">
+  <ion-item-group>
+    <ion-item class="notification-item" lines="none" >
+        <ion-row class="details-item-wrapper header-item-title">
+          <ion-col size="3">
+            <app-text-shell [data]="'Date'"></app-text-shell>
+          </ion-col>
+          <ion-col size="3">
+            <app-text-shell [data]="'Cases'"></app-text-shell>
+          </ion-col>
+          <ion-col size="3">
+            <app-text-shell [data]="'Deaths'"></app-text-shell>
+          </ion-col>
+          <ion-col size="3">
+            <app-text-shell [data]="'Recovered'"></app-text-shell>
+          </ion-col>
+        </ion-row>
+    </ion-item>
+  </ion-item-group>
+</div>
+
+<ion-content class="food-details-content">
+  <ng-container *ngIf="details">
+    <ion-item-group>
+      <ion-item class="notification-item" lines="none" *ngFor="let detail of details?.timeline?.data">
+          <ion-row class="details-item-wrapper">
+            <ion-col size="3">
+              <app-text-shell [data]="detail?.date"></app-text-shell>
+            </ion-col>
+            <ion-col size="3">
+              <app-text-shell [data]="detail?.cases | number "></app-text-shell>
+            </ion-col>
+            <ion-col size="3">
+              <app-text-shell [data]="detail?.deaths | number "></app-text-shell>
+            </ion-col>
+            <ion-col size="3">
+              <app-text-shell [data]="detail?.recovered | number "></app-text-shell>
+            </ion-col>
+          </ion-row>
+      </ion-item>
+    </ion-item-group>
+  </ng-container>
+</ion-content>

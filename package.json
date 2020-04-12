@@ -1,0 +1,62 @@
+{
+  "name": "coronavirustrack",
+  "description": "Corona Virus Track",
+  "version": "1.0.0",
+  "author": "George Perez",
+  "contributors": [
+    "george <gperez@codigorenovado.com>"
+  ],
+  "homepage": "https://codigorenovado.com/",
+  "private": true,
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "lint": "ng lint"
+  },
+  "dependencies": {
+    "@angular/common": "^9.1.1",
+    "@angular/core": "^9.1.1",
+    "@angular/forms": "^9.1.1",
+    "@angular/platform-browser": "^9.1.1",
+    "@angular/platform-browser-dynamic": "^9.1.1",
+    "@angular/pwa": "~0.901.1",
+    "@angular/router": "^9.1.1",
+    "@angular/service-worker": "^9.1.1",
+    "@capacitor/android": "^2.0.1",
+    "@capacitor/cli": "^2.0.1",
+    "@capacitor/core": "^2.0.1",
+    "@capacitor/ios": "^2.0.1",
+    "@ionic/angular": "5.0.7",
+    "angular-pipes": "^10.0.0",
+    "capacitor-image-cache": "0.0.12",
+    "core-js": "^2.5.7",
+    "dayjs": "1.8.24",
+    "google-libphonenumber": "^3.2.8",
+    "npm": "^6.14.4",
+    "rxjs": "6.5.5",
+    "st-cached-image": "0.0.6",
+    "tslib": "^1.11.1",
+    "zone.js": "~0.10.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/architect": "^0.901.1",
+    "@angular-devkit/build-angular": "^0.901.1",
+    "@angular-devkit/core": "^9.1.1",
+    "@angular-devkit/schematics": "^9.1.1",
+    "@angular/cli": "^9.1.1",
+    "@angular/compiler": "^9.1.1",
+    "@angular/compiler-cli": "^9.1.1",
+    "@angular/language-service": "~9.1.1",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-angular": "^8.3.4",
+    "@ionic/angular-toolkit": "^2.2.0",
+    "@types/node": "13.11.1",
+    "@webcomponents/webcomponentsjs": "^2.4.3",
+    "codelyzer": "^5.2.2",
+    "husky": "^4.2.5",
+    "ts-node": "~8.1.0",
+    "tslint": "~5.16.0",
+    "typescript": "~3.8.3"
+  }
+}
