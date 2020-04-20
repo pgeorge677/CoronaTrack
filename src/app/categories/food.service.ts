@@ -14,7 +14,9 @@ export class FoodService {
   constructor(private http: HttpClient) { }
 
   public getAllDataSource(): Observable<any> {
-    return this.http.get<{any}>('https://corona.lmao.ninja/all');
+   // return this.http.get<{any}>('https://corona.lmao.ninja/all');// Obsoleta
+   // Nuea Version Habilitada
+   return this.http.get<{any}>('https://corona.lmao.ninja/v2/all');
   }
 
   public getAllStore(dataSource: Observable<FoodDetailsModel>): DataStore<FoodDetailsModel> {
