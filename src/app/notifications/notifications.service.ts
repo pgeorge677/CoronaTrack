@@ -12,7 +12,7 @@ export class NotificationsService {
   private detailsDataStore: DataStore<NotificationsModel>;
 
   public getData(): Observable<any> {
-    return this.http.get<any>('https://corona.lmao.ninja/countries')
+    return this.http.get<any>('https://corona.lmao.ninja/v2/countries')
       .pipe(
           map((details) => {
             const notificationsModel = new NotificationsModel();
